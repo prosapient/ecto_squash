@@ -4,6 +4,7 @@ This is a Mix task intended to streamline migration squashing. It replaces
 several migrations with a SQL-based migration, which applies schema, and
 a second one for making sure that all of the squashed migrations has been
 applied and nothing else, before migrating further.
+Note: only PostgreSQL is supported yet.
 
 The repository must be set under `:ecto_repos` in the
 current app configuration or given via the `-r` option.
