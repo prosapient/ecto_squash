@@ -1,5 +1,7 @@
 # Ecto Squash
 
+![Package version](https://img.shields.io/hexpm/v/ecto_squash?style=plastic)
+
 This is a Mix task intended to streamline migration squashing. It replaces
 several migrations with a SQL-based migration, which applies schema, and
 a second one for making sure that all of the squashed migrations has been
@@ -9,7 +11,7 @@ Note: only PostgreSQL is supported yet.
 ## Installation
 
 The package can be installed by adding `ecto_squash` to your list of
-dependencies in `mix.exs`:
+dependencies in `mix.exs` (replace `x.x.x` with current version in the badge):
 
 ```elixir
 def deps do
