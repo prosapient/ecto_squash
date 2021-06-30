@@ -39,7 +39,7 @@ and migrate to latest version without asking to confirm actions
 
 ## Configuration
 
-If :ecto_sql app configuration specifies a custom migration module,
+If `:ecto_sql` app configuration specifies a custom migration module,
 the generated migration code will use that rather than the default
 `Ecto.Migration`:
 

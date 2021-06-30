@@ -63,7 +63,7 @@ defmodule Mix.Tasks.Ecto.Squash do
 
   ## Configuration
 
-  If :ecto_sql app configuration specifies a custom migration module,
+  If `:ecto_sql` app configuration specifies a custom migration module,
   the generated migration code will use that rather than the default
   `Ecto.Migration`:
 
