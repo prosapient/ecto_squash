@@ -6,8 +6,18 @@ a second one for making sure that all of the squashed migrations has been
 applied and nothing else, before migrating further.
 Note: only PostgreSQL is supported yet.
 
-The repository must be set under `:ecto_repos` in the
-current app configuration or given via the `-r` option.
+## Installation
+
+The package can be installed by adding `ecto_squash` to your list of
+dependencies in `mix.exs`:
+
+```elixir
+def deps do
+  [
+    {:ecto_squash, "~> x.x.x", only: [:dev]}
+  ]
+end
+```
 
 ## Examples
 
@@ -15,6 +25,9 @@ Squash migrations upto and including 20210601033528 into a single one:
 
       mix ecto.squash --to 20210601033528
       mix ecto.squash --to 20210601033528 -r Custom.Repo
+
+The repository must be set under `:ecto_repos` in the
+current app configuration or given via the `-r` option.
 
 SQL migration will have a filename prefixed with timestamp of the latest
 migration squashed. That way it won't be applied if squashed migration is
@@ -44,21 +57,3 @@ the generated migration code will use that rather than the default
 `Ecto.Migration`:
 
       config :ecto_sql, migration_module: MyApplication.CustomMigrationModule
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ecto_squash` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:ecto_squash, "~> x.x.x"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/ecto_squash](https://hexdocs.pm/ecto_squash).
-

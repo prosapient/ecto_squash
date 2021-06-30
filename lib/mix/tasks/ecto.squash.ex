@@ -30,15 +30,15 @@ defmodule Mix.Tasks.Ecto.Squash do
   and a second one for making sure that all of the squashed migrations has been
   applied and nothing else, before migrating further.
 
-  The repository must be set under `:ecto_repos` in the
-  current app configuration or given via the `-r` option.
-
   ## Examples
 
   Squash migrations upto and including 20210601033528 into a single one:
 
       mix ecto.squash --to 20210601033528
       mix ecto.squash --to 20210601033528 -r Custom.Repo
+
+  The repository must be set under `:ecto_repos` in the
+  current app configuration or given via the `-r` option.
 
   SQL migration will have a filename prefixed with timestamp of the latest
   migration squashed. That way it won't be applied if squashed migration is
