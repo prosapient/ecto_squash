@@ -35,7 +35,7 @@ defmodule EctoSquash.MixProject do
   defp package() do
     [
       links: %{"GitHub" => @github_url},
-      licenses: "Apache-2.0"
+      licenses: ["Apache-2.0"]
     ]
   end
 end
