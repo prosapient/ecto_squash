@@ -104,10 +104,6 @@ defmodule Mix.Tasks.Ecto.Squash do
     EctoSquash.Postgres.structure_dump(path, repo.config())
     checker_path = create_checker_migration(path, repo, migrations, to)
 
-    if yes?(opts, "Do you want to apply all migrations?") do
-      Mix.Task.run("ecto.migrate", migrate_opts)
-    end
-
     [squash_path, checker_path]
   end
 
