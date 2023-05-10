@@ -26,8 +26,8 @@ defmodule EctoSquash.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ecto_sql, "~> 3.6.2"},
-      {:postgrex, "~> 0.15.0 or ~> 1.0", optional: true},
+      {:ecto_sql, ">= 3.6.2"},
+      {:postgrex, ">= 0.16.0", optional: true},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
